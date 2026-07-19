@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Identification Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Color Perception Boundary</h1>
+            <p>We are testing at what point people distinguish between different colors.</p>
+            <p>Select the mode for generating test colors (25 rounds):</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+                <button id="start-random-btn" class="btn primary-btn">Random Colors</button>
+                <button id="start-gradient-btn" class="btn secondary-btn">Color Gradients</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="header-info">
+                <span id="round-counter">Round: 1 / 25</span>
+            </div>
+            
+            <div class="color-display-container">
+                <div id="color-display"></div>
+            </div>
+            
+            <h2 class="question">What color is this?</h2>
+            
+            <div id="options-container" class="options-grid">
+                <!-- Options injected by JS -->
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <h1>Research Complete</h1>
+            <p class="results-summary">Thank you for participating.</p>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-label">Avg Response Time</span>
+                    <span id="time-result" class="stat-value">0s</span>
+                </div>
+            </div>
+
+            <div class="detailed-results">
+                <h3>Round Breakdown</h3>
+                <div id="results-list" class="results-list">
+                    <!-- Detailed results injected by JS -->
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn secondary-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
